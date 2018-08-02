@@ -3,22 +3,21 @@ Determining the position of robot in a mapped environment.
 Because it is a probabilistic model so robot do this by making some guesses and then over the time it narrow down to one position.
 
 **3 types** -  
-		* Local (Initial position is known but the challenge is in estimating its position 
-	 		   		   while movement.)
-		* Global (Initial position is not known)
-		* Kidnapped (The position of robot can be changed any time)
+* Local (Initial position is known but the challenge is in estimating its position while movement.)
+* Global (Initial position is not known)
+* Kidnapped (The position of robot can be changed any time)
 
 ### Kalman Filter: 
 It is used to remove the noise/uncertainty form the data. 
 * It is a continuous iteration of two step process-
-#### 1. Update measurement- In this we us the recorded measurement to update the state.
-#### 2. State prediction- We use the information of current state to predict what will 
+**1. Update measurement**- In this we us the recorded measurement to update the state.
+**2. State prediction**- We use the information of current state to predict what will 
 be the future state. In start we make a guess.
 
 **3 types** 
-		* KF (for linear system)
-		* Extended KF (for non linear system)
-		* Unscented KF (for extreme non linear system)
+* KF (for linear system)
+* Extended KF (for non linear system)
+* Unscented KF (for extreme non linear system)
 
 
 # Implementation of EKF Package on ROS
@@ -31,7 +30,7 @@ be the future state. In start we make a guess.
 5. Rviz Package
 
 ### 1.TurtleBot Gazebo Package
-Launches a mobile robot inside the gazebo environment
+Launches a mobile robot inside the gazebo environment.
 
 #### Clone package
 ```sh
@@ -54,12 +53,12 @@ $ source devel/setup.zsh
 $ roslaunch turtlebot_gazebo turtlebot_world.launch
 ```
 ### 2. Robot Pose EKF Package
-Estimate the position and orientation of the robot
+Estimate the position and orientation of the robot.
 
 
               SENSORS --------> robot_pose_ekf ---------> FILTER
 
-The EKF node is subscribes the data from different different topics(like odom topic,IMU data topic etc)and publishes the filtered results.
+The EKF node is subscribes the data from various topics(like odom topic,IMU data topic etc)and publishes the filtered results.
 
 
 #### Clone package
@@ -96,7 +95,7 @@ $ source devel/setup.zsh
 $ roslaunch robot_pose_ekf robot_pose_ekf.launch 
 ```
 ### 3. Odometetry to Trajectory Package
-Append the odometry value generated over time into a trajectory path
+Append the odometry value generated over time into a trajectory path.
 
 #### Install the package
 ```sh
@@ -114,9 +113,9 @@ $ source devel/setup.bash
 $ roslaunch odom_to_trajectory create_trajectory.launch
 ```
 
-### TurtleBot Teleop Package
-It will let you drive the turtleBot with keyboard command
-The turtleBot node has no subscriber, it only publishes control commands
+### 4. TurtleBot Teleop Package
+It will let you drive the turtleBot with keyboard command.
+The turtleBot node has no subscriber, it only publishes control commands.
 
 #### Clone package
 ```sh
@@ -139,8 +138,8 @@ $ source devel/setup.zsh
 $ roslaunch turtlebot_teleop turtlebot_teleop.launch
 ```
 
-### Rviz Package
-Gives a visualisation of estimated robot position and its orientation 
+### 5. Rviz Package
+Gives a visualisation of estimated robot position and its orientation.
 
 #### Launch Package
 ```sh
