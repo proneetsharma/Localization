@@ -32,9 +32,10 @@ be the future state. In start we make a guess.
 -Launches a mobile robot inside the gazebo environment
 
 #### Clone package
+```sh
 $ cd /home/catkin_ws/src
 $ git clone https://github.com/turtlebot/turtlebot_simulator
-
+```
 #### Install Dependencies
 $ cd /home/catkin_ws/src
 $ source devel/setup.zsh
