@@ -164,7 +164,7 @@ $ mkdir launch
 $ cd launch
 $ subl main.launch
 ```
-(copy the content of each file to the main.launch)
+(copy the content of each .launch file to the main.launch)
 
 #### Launch the main.launch file
 ```sh
