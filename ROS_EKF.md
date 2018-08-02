@@ -37,17 +37,20 @@ $ cd /home/catkin_ws/src
 $ git clone https://github.com/turtlebot/turtlebot_simulator
 ```
 #### Install Dependencies
+```sh
 $ cd /home/catkin_ws/src
 $ source devel/setup.zsh
 $ rosdep -i install turtlebot_gazebo
-
+```
 #### Build Package
+```sh
 $ catkin_make
 $ source devel/setup.zsh
-
-#### Launch Node 
+```
+#### Launch Node
+```sh 
 $ roslaunch turtlebot_gazebo turtlebot_world.launch
-
+```
 ### 2. Robot Pose EKF Package
 -Estimate the position and orientation of the robot
 
@@ -58,9 +61,10 @@ The EKF node is subscribes the data from different different topics(like odom to
 
 
 #### Clone package
+```sh
 $ cd /home/catkin_ws/src
 $ git clone https://github.com/udacity/robot_pose_ekf
-
+```
 Edit the robot_pose_ekf.launch file
 
 		<launch>
@@ -81,76 +85,91 @@ Edit the robot_pose_ekf.launch file
 		</launch>
 
 #### Build Package
+```sh
 $ catkin_make
 $ source devel/setup.zsh
-
+```
 #### Launch Node 
+```sh
 $ roslaunch robot_pose_ekf robot_pose_ekf.launch 
-
+```
 ### 3. Odometetry to Trajectory Package
 -Append the odometry value generated over time into a trajectory path
 
 #### Install the package
+```sh
 $ cd /home/workspace/catkin_ws/src
 $ git clone https://github.com/udacity/odom_to_trajectory
-
+```
 #### Build the package
+```sh
 $ cd /home/workspace/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
-
+```
 #### Launch the nodes
+```sh
 $ roslaunch odom_to_trajectory create_trajectory.launch
-
+```
 
 ### TurtleBot Teleop Package
 -It will let you drive the turtleBot with keyboard command
 -The turtleBot node has no subscriber, it only publishes control commands
 
 #### Clone package
+```sh
 $ cd /home/catkin_ws/src
 $ git clone https://github.com/turtlebot/turtlebot
-
+```
 #### Install Dependencies
+```sh
 $ cd /home/catkin_ws/src
 $ source devel/setup.zsh
 $ rosdep -i install turtlebot_teleop
-
+```
 #### Build Package
+```sh
 $ catkin_make
 $ source devel/setup.zsh
-
+```
 #### Launch Node 
+```sh
 $ roslaunch turtlebot_teleop turtlebot_teleop.launch
-
+```
 
 ### Rviz Package
 -Gives a visualisation of estimated robot position and its orientation 
 
 #### Launch Package
+```sh
 $ rviv
-
+```
 ## Creating a launch file so that it can launch the above packages simlultaneously
 	
 #### Create a main package(the launch file should always be in a package)
+```sh
 $ cd /home/catkin_ws/src
 $ catkin_cretae_pkg main
-	
+```	
 #### Build Package
+```sh
 $ catkin_make
 $ source devel/setup.zsh
- 	
+``` 	
 #### Create and edit the main.launch file
+```sh
 $ cd /home/catkin_ws/src/main
 $ mkdir launch
 $ cd launch
 $ subl main.launch
+```
 (copy the content of each file to the main.launch)
 
 #### Launch the main.launch file
+```sh
 $ cd /home/workspace/catkin_ws
 $ source devel/setup.bash
 $ roslaunch main main.launch
-
+```
 
 
