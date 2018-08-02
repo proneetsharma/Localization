@@ -1,24 +1,24 @@
-#Localization:
+# Localization:
 -Determining the position of robot in a mapped environment.
 -Because it is a probabilistic model so robot do this by making some guesses and then over the time it narrow down to one position.
 
-***3 types***-  *Local (Initial position is known but the challenge is in estimating its position 
+**3 types** -  *Local (Initial position is known but the challenge is in estimating its position 
 	 		   		   while movement.) 
 	 		   		   *Global (Initial position is not known)
 	 		   		   *Kidnapped (The position of robot can be changed any time)
 
-###Kalman Filter: It is used to remove the noise/uncertainty form the data. 
+### Kalman Filter: It is used to remove the noise/uncertainty form the data. 
 			   *It is a continuous iteration of two step process-
 			   1. Update measurement- In this we us the recorded measurement to update the state.
 			   2. State prediction- We use the information of current state to predict what will 
 			   	  be the future state. In start we make a guess.
 
-***3 types***-1. KF (for linear system)
+**3 types** -1. KF (for linear system)
 			  2. Extended KF (for non linear system)
 			  3. Unscented KF (for extreme non linear system)
 
 
-#Implementation of EKF Package on ROS
+# Implementation of EKF Package on ROS
 
 ###Here we are using 5 different Packages-
 1. TurtleBot Gazebo Package
