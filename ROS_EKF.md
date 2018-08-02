@@ -10,8 +10,8 @@ Because it is a probabilistic model so robot do this by making some guesses and 
 ### Kalman Filter: 
 It is used to remove the noise/uncertainty form the data. 
 * It is a continuous iteration of two step process-
-**1. Update measurement**- In this we us the recorded measurement to update the state.
-**2. State prediction**- We use the information of current state to predict what will 
+	* **1. Update measurement**- In this we us the recorded measurement to update the state.
+	* **2. State prediction**- We use the information of current state to predict what will 
 be the future state. In start we make a guess.
 
 **3 types** 
